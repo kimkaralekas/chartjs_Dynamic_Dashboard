@@ -90,3 +90,79 @@ new Chart(ctx).Doughnut(data);
 var canvas = document.getElementById("shipments");
 var ctx = canvas.getContext("2d");
 new Chart(ctx).Line(data, options);
+
+
+// Radar graph
+var data = {
+    labels : ["Helpful","Friendly","Kind","Rude","Slow","Frustrating"],
+    datasets : [
+        {
+            fillColor : "rgba(220,220,220,0.5)",
+            strokeColor : "#637b85",
+            pointColor : "#dbba34",
+            pointStrokeColor : "#637b85",
+            data : [65,59,90,81,30,56]
+        }
+    ]
+}
+var canvas = document.getElementById("departments");
+var ctx = canvas.getContext("2d");
+new Chart(ctx).Radar(data, options);
+
+// Responsive
+@media only screen and (min-width:300px){
+    .container {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+ 
+@media only screen and (min-width:600px){
+    .container {
+        width: 580px;
+        margin: 0 auto;
+    }
+    .third {
+        float: left;
+        width: 47.5%;
+        margin-left: 5%;
+    }
+    .third:first-child {
+        margin-left: 0;
+    }
+    .third:last-child {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+ 
+@media only screen and (min-width:960px){
+    .container {
+        width: 940px;
+    }
+    .third {
+        float: left;
+        width: 30%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .third:first-child {
+        margin-left: 0;
+    }
+    .third:last-child {
+        margin-right: 0;
+        margin-left: 2.5%;
+        width: 30%;
+    }
+}
+@media only screen and (min-width:1140px){
+    .container {
+        width: 1120px;
+    }
+}
+@media only screen and (min-width:1360px){
+    .container {
+        width: 1300px;
+    }
+}
