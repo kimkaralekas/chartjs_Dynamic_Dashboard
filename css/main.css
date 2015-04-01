@@ -416,3 +416,12 @@ header .button {
     line-height: 2em;
     background: #d0dde3;
 }
+
+/* Third line widget styling */
+.widget.line p span {
+    color: #dbba34;
+}
+.widget.line p strong {
+    color: #637b85;
+    font-weight: 400;
+}
